@@ -34,10 +34,6 @@ Blurly is a lightweight, privacy-first Chrome extension designed for content cre
 
 ---
 
-## 🚀 Getting Started
-
-This repository hosts the public landing page and privacy policy for **Blurly**.
-
 🔗 **Live Site:** [https://ninearif.github.io/blurly](https://ninearif.github.io/blurly)
 
 ## ☕ Support Blurly
