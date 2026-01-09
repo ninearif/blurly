@@ -494,36 +494,36 @@ footer {
     }
 }
 
-/* Rotating Text Animation */
-.rotating-text {
+/* Slot Machine Animation */
+.text-spinner {
     display: inline-block;
+    vertical-align: bottom;
+    height: 1.2em;
+    /* Adjust based on line-height */
+    overflow: hidden;
     position: relative;
-    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    opacity: 1;
-    transform: translateY(0);
+    /* transition: width 0.5s ease;  Managed by JS for smoother sync */
+}
+
+.text-reel {
+    display: flex;
+    flex-direction: column-reverse;
+    /* Stack bottom-to-top so Y=0 is top */
+    /* transform will be set by JS */
+}
+
+.text-item {
+    display: flex;
+    align-items: center;
+    height: 1.2em;
+    /* Must match container height */
+    white-space: nowrap;
+
+    /* Gradient Text Styling applied to items */
     background: linear-gradient(135deg, var(--primary), var(--secondary));
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     padding-bottom: 5px;
-}
-
-.rotating-text.slide-out {
-    opacity: 0;
-    transform: translateY(-20px) rotateX(90deg);
-}
-
-.rotating-text.slide-in {
-    animation: slideIn 0.5s forwards;
-}
-
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px) rotateX(-90deg);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0) rotateX(0);
-    }
+    /* Prevent clipping */
 }
