@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Blurly</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="images/logo.png">
+</head>
+
+<body>
+    <div class="background-gradient"></div>
+
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"
+                    style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 10px;">
+                    <img src="images/logo.png" alt="Blurly Logo">
+                    <span>Blurly</span>
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="index.html#features">Features</a>
+                <a href="privacy.html" class="active">Privacy Policy</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="privacy-content">
+            <h1>Privacy Policy</h1>
+            <p><strong>Last Updated: January 9, 2026</strong></p>
+
+            <p>This Privacy Policy describes how Blurly ("we", "us", or "our") handles your information when you use the
+                Blurly Chrome extension.</p>
+
+            <h2>1. Data Collection and Usage</h2>
+            <p><strong>We do not collect, transmit, or sell any of your personal data.</strong></p>
+            <p>Blurly is designed to be a privacy-first application that runs entirely locally on your device.</p>
+            <ul>
+                <li><strong>No Remote Servers:</strong> We do not have a backend server. We do not track your browsing
+                    history, clicks, or any other interactions.</li>
+                <li><strong>Local Processing:</strong> All blurring logic and rule creation happens directly within your
+                    browser.</li>
+            </ul>
+
+            <h2>2. Local Storage</h2>
+            <p>We use <code>chrome.storage.local</code> to improve your experience. This data is stored strictly on your
+                local machine and is never synced to our servers (as we don't have any).</p>
+            <ul>
+                <li><strong>Preferences:</strong> We store your settings (e.g., whether "Blur Mode" is currently toggled
+                    ON or OFF).</li>
+                <li><strong>Saved Rules:</strong> We store the CSS selectors of the elements you have chosen to blur so
+                    they remain blurred when you refresh the page.</li>
+            </ul>
+
+            <h2>3. Permissions</h2>
+            <p>We request the minimum permissions necessary for the extension to function:</p>
+            <ul>
+                <li><strong>activeTab & Scripting:</strong> To inject the blurring visual effects into the page you are
+                    viewing.</li>
+                <li><strong>Storage:</strong> To save your blur rules locally.</li>
+                <li><strong>Host Permissions (&lt;all_urls&gt;):</strong> To allow the tool to work on any website you
+                    visit, as users may need to blur content on various different domains.</li>
+            </ul>
+
+            <h2>4. Third-Party Services</h2>
+            <p>We do not use any third-party analytics (like Google Analytics) or tracking pixels.</p>
+
+            <h2>5. Contact</h2>
+            <p>If you have questions about this policy, please contact us via the Chrome Web Store support tab or submit
+                an issue on our <a href="https://github.com/ninearif/blur-extension">GitHub repository</a>.</p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="brand">
+                    <strong>Blurly</strong>
+                    <p>© 2026. Open source and privacy first.</p>
+                </div>
+                <div class="links">
+                    <a href="https://github.com/ninearif/blur-extension" target="_blank">GitHub</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="mailto:support@blurly.app">Support</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
