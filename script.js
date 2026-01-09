@@ -1,4 +1,4 @@
-const targetWords = ["meetings", "screen recordings", "teaching", "demos"];
+const targetWords = ["meetings", "screen recording", "tutorials", "demos", "presentations", "calls"];
 let currentIndex = 0;
 const container = document.getElementById("rotating-text");
 // Store original class for re-applying
@@ -108,7 +108,8 @@ async function spin() {
     const shiftPercentage = ((pool.length - 1) / pool.length) * 100;
     newReel.style.transform = `translateY(-${shiftPercentage}%)`;
     newReel.style.transition = 'none'; // No transition for setup
-    newReel.style.filter = 'blur(1px)'; // Motion blur effect
+    newReel.style.filter = 'blur(3px)'; // Enhanced motion blur effect during spinning
+    newReel.style.alignItems = 'flex-start'; // Ensure alignment allows natural width
 
     currentReel.replaceWith(newReel);
 
@@ -119,13 +120,13 @@ async function spin() {
     // We need to measure it. 
     // It's the first child of newReel.
     const targetItem = newReel.firstElementChild;
-    const newWidth = targetItem.getBoundingClientRect().width; // This might be restricted by container width?
-    // Container has overflow hidden, but standard flow.
-    // We should set container width explicitly.
+    const newWidth = targetItem.getBoundingClientRect().width;
+
+    // Set container width explicitly to the new word's width
     container.style.width = `${newWidth}px`;
 
     // Animate
-    newReel.style.transition = 'transform 1s cubic-bezier(0.1, 0, 0.2, 1), filter 0.5s ease-out';
+    newReel.style.transition = 'transform 1s cubic-bezier(0.1, 0, 0.2, 1), filter 1s ease-out';
     newReel.style.transform = 'translateY(0)';
     newReel.style.filter = 'blur(0)';
 

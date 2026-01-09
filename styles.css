@@ -497,7 +497,7 @@ footer {
 /* Slot Machine Animation */
 .text-spinner {
     display: inline-block;
-    vertical-align: bottom;
+    vertical-align: text-bottom;
     height: 1.2em;
     /* Adjust based on line-height */
     overflow: hidden;
@@ -509,6 +509,8 @@ footer {
     display: flex;
     flex-direction: column-reverse;
     /* Stack bottom-to-top so Y=0 is top */
+    align-items: flex-start;
+    /* Allow items to have their natural width */
     /* transform will be set by JS */
 }
 
@@ -520,10 +522,9 @@ footer {
     white-space: nowrap;
 
     /* Gradient Text Styling applied to items */
-    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    background: linear-gradient(to right, #1e293b, #334155);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    padding-bottom: 5px;
     /* Prevent clipping */
 }
