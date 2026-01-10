@@ -142,12 +142,26 @@ async function spin() {
     }, 1000); // 1s matches transition duration
 }
 
+// Demo Card Blur Effect
+function initDemoCardBlur() {
+    const demoCard = document.querySelector('.demo-card');
+    if (demoCard) {
+        // Blur the card body after 2 seconds
+        setTimeout(() => {
+            demoCard.classList.add('blur-active');
+        }, 2000);
+    }
+}
+
 // Initial measure
 window.addEventListener('load', () => {
     const item = container.querySelector('.text-item');
     if (item) {
         container.style.width = `${item.offsetWidth}px`;
     }
+
+    // Initialize demo card blur effect
+    initDemoCardBlur();
 
     // Start loop
     setInterval(spin, 3000);
@@ -159,4 +173,7 @@ if (document.readyState === 'complete') {
     if (item) {
         container.style.width = `${item.offsetWidth}px`;
     }
+    
+    // Initialize demo card blur effect
+    initDemoCardBlur();
 }
